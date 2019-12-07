@@ -36,6 +36,13 @@ aside {
       padding: 10px;
       text-decoration: none;
       color: #fff; }
+    aside li span {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff; 
+      cursor: pointer;}
     aside li:hover {
       background-color: rgba(55, 55, 55, 0.8); }
 

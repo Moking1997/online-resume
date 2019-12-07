@@ -2,33 +2,40 @@
 <template>
   <el-row>
     <el-col class="no-print" :span="4">
-      姓名:
-      <input v-model="name" type="text" />
-      <br />工作:
-      <input v-model="work" type="text" />
-      <hr />
+      <el-button type="success">
+        <i class="el-icon-user-solid">个人信息</i>
+      </el-button>
+      <el-input v-model="name" type="text" />
+      <br />
+      <el-input v-model="work" type="text" />
       <div v-for="info in infos">
-        <span>{{info.text}}:</span>
-        <input v-model="info.content" type="text" />
+        <el-input v-model="info.content" type="text" />
       </div>
-      <hr />学校:
-      <input v-model="education.school" type="text" />
-      <br />时间:
-      <input v-model="education.year" type="text" />
-      <br />专业:
-      <input v-model="education.speciality" type="text" />
+      <el-button type="success">
+        <i class="el-icon-user-solid">教育经历</i>
+      </el-button>
+      <el-input v-model="education.school" type="text" />
+      <br />
+      <el-input v-model="education.year" type="text" />
+      <br />
+      <el-input v-model="education.speciality" type="text" />
+      <el-button type="success">
+        <i class="el-icon-user-solid">项目经历</i>
+      </el-button>
       <div v-for="experience in experiences">
-        公司：
-        <input v-model="experience.company" type="text" />
-        时间：
-        <input v-model="experience.year" type="text" />
-        项目：
-        <input v-model="experience.item" type="text" />
-        任务：
-        <input v-model="task.task" v-for="task in experience.tasks" type="text" />
-        <button @click="add_task(experience.tasks)" type="button">加任务</button>
+        <el-input v-model="experience.company" type="text" />
+        <el-input v-model="experience.year" type="text" />
+        <el-input v-model="experience.item" type="text" />
+        <el-input
+          type="textarea"
+          :rows="2"
+          v-model="task.task"
+          v-for="task in experience.tasks"
+          cols="40"
+        />
+        <el-button type="primary" @click="add_task(experience.tasks)">加任务</el-button>
       </div>
-      <button @click="add_experience" type="button">加公司经历</button>
+      <el-button type="primary" @click="add_experience">加公司经历</el-button>
     </el-col>
     <el-col class="print" :span="20">
       <Right

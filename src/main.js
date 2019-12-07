@@ -6,7 +6,8 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/normalize.min.css'
-
+import htmlToPdf from './utils/htmlToPdf'
+Vue.use(htmlToPdf)
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)

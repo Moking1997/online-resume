@@ -7,14 +7,15 @@
           <a href="https://github.com/leotian" target="_blank">源代码</a>
         </li>
         <li>
-          <a href="https://resume.leotian.cn/pdf/LeoTianResume.pdf" target="_blank">PDF下载</a>
+          <span @click="getPdf('#pdfDom')">下载PDF</span>
+          <!-- <a @click="getPdf('#pdfDom')" href="#" target="_blank">PDF下载</a> -->
         </li>
         <li>
           <a href="https://www.zhihu.com/people/leo.tian" target="_blank">知乎</a>
         </li>
       </ul>
     </aside>
-    <div class="container">
+    <div id="pdfDom" class="container">
       <header>
         <figure class="qrcode">
           <img src="../assets/wechat.jpg" />
@@ -191,7 +192,11 @@
                     <dd
                       class="experience-task el-icon-setting"
                       v-for="task in experience.tasks"
-                    >&nbsp; {{task.task}}</dd>
+                      v-html="task.task"
+                    >
+                      &nbsp;
+                      {{task.task}}
+                    </dd>
                   </dl>
                 </li>
               </ul>
@@ -358,6 +363,7 @@
         </article>
       </article>
     </div>
+    <div v-html="pageData"></div>
   </div>
 </template>
 
@@ -366,7 +372,9 @@ export default {
   name: "right",
   props: ["fields", "infos", "education", "name", "work", "experiences"],
   data() {
-    return {};
+    return {
+      htmlTitle: "页面导出PDF文件名"
+    };
   }
 };
 </script>
