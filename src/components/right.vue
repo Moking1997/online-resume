@@ -28,25 +28,6 @@
             <li :class="info.icon" v-for="info in infos">
               <a>&nbsp;{{info.content}}</a>
             </li>
-            <!--
-            <li class="el-icon-mobile-phone">
-              <a>&nbsp;15611662306</a>
-            </li>
-            <br />
-            <li class="el-icon-message">
-              <a href="mailto:leotiann@gmail.com">&nbsp;leotiann@gmail.com</a>
-            </li>
-            <br />
-            <li class="el-icon-user">
-              <a href="https://github.com/leotian">&nbsp;github — https://github.com/leotian</a>
-            </li>
-            <li class="el-icon-location">
-              <a href="https://leotian.cn/">&nbsp;个人博客 — https://leotian.cn</a>
-            </li>
-            <li class="el-icon-trophy">
-              <a href="https://resume.leotian.cn/">&nbsp;简历页面 — https://resume.leotian.cn</a>
-            </li>
-            -->
           </ul>
         </address>
       </header>
@@ -198,6 +179,19 @@
                       参与开发
                       <strong>表单服务</strong> 负责表单数据的展示页面
                     </dd>
+                  </dl>
+                </li>
+                <li class="timeline-item el-icon-s-cooperation" v-for="experience in experiences">
+                  <h3 class="timeline-title">
+                    <span class="experience-place">{{experience.company}}</span>
+                    <time class="experience-time">{{experience.year}}</time>
+                  </h3>
+                  <dl class="experience-content">
+                    <dt class="experience-position">{{experience.item}}</dt>
+                    <dd
+                      class="experience-task el-icon-setting"
+                      v-for="task in experience.tasks"
+                    >&nbsp; {{task.task}}</dd>
                   </dl>
                 </li>
               </ul>
@@ -370,7 +364,7 @@
 <script>
 export default {
   name: "right",
-  props: ["fields", "infos", "education", "name", "work"],
+  props: ["fields", "infos", "education", "name", "work", "experiences"],
   data() {
     return {};
   }
@@ -407,7 +401,7 @@ export default {
   position: absolute;
   width: 26px;
   height: 26px;
-  margin-top: 10px;
+  margin-top: -7px;
   margin-left: 3px;
   margin-left: -22px;
   padding: 6px;
@@ -468,7 +462,7 @@ export default {
   position: absolute;
   width: 26px;
   height: 26px;
-  margin-top: 10px;
+  margin-top: -7px;
   margin-left: 3px;
   margin-left: -22px;
   padding: 6px;
@@ -508,7 +502,7 @@ export default {
   position: absolute;
   width: 26px;
   height: 26px;
-  margin-top: 10px;
+  margin-top: -7px;
   margin-left: 3px;
   margin-left: -22px;
   padding: 6px;

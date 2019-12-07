@@ -17,9 +17,28 @@
       <input v-model="education.year" type="text" />
       <br />专业:
       <input v-model="education.speciality" type="text" />
+      <div v-for="experience in experiences">
+        公司：
+        <input v-model="experience.company" type="text" />
+        时间：
+        <input v-model="experience.year" type="text" />
+        项目：
+        <input v-model="experience.item" type="text" />
+        任务：
+        <input v-model="task.task" v-for="task in experience.tasks" type="text" />
+        <button @click="add_task(experience.tasks)" type="button">加任务</button>
+      </div>
+      <button @click="add_experience" type="button">加公司经历</button>
     </el-col>
     <el-col class="print" :span="20">
-      <Right :fields="fields" :infos="infos" :education="education" :name="name" :work="work" />
+      <Right
+        :fields="fields"
+        :infos="infos"
+        :education="education"
+        :name="name"
+        :work="work"
+        :experiences="experiences"
+      />
     </el-col>
   </el-row>
 </template>
@@ -75,11 +94,45 @@ export default {
         year: "2016-2020",
         school: "宁波大学科学技术学院",
         speciality: "计算机科学与技术"
-      }
+      },
+      experiences: [
+        {
+          company: "xx公司",
+          name: "xxx",
+          year: "2016-2017",
+          item: "xx项目",
+          tasks: [{ task: "xx任务" }, { task: "xx任务" }]
+        },
+        {
+          company: "xx公司",
+          name: "xxx",
+          year: "2016-2017",
+          item: "xx项目",
+          tasks: [{ task: "xx任务" }, { task: "xx任务" }]
+        }
+      ]
     };
   },
   components: {
     Right
+  },
+  methods: {
+    add_experience: function() {
+      var experience = {
+        company: "xx公司",
+        name: "xxx",
+        year: "2016-2017",
+        item: "xx项目",
+        tasks: [{ task: "xx任务" }, { task: "xx任务" }]
+      };
+      this.experiences.push(experience);
+    },
+    add_task: function(tasks) {
+      var task = {
+        task: "xx任务"
+      };
+      tasks.push(task);
+    }
   },
   //生命周期 - 创建完成（访问当前this实例）
   created() {},

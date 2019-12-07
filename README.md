@@ -1,6 +1,6 @@
-# resume
+# online - resume
 
-> A Vue.js project
+> 一个在线简历生成器
 
 ## Build Setup
 
