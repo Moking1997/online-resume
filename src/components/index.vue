@@ -135,7 +135,7 @@ export default {
         editView: 6
       },
       htmlTitle: "我的个人简历",
-      name: "叶晓剑",
+      name: "叶小小",
       work: "前端工程师",
       cet4: false,
       cet6: false,
@@ -145,7 +145,7 @@ export default {
         {
           name: "phone",
           text: "手机",
-          content: "15057466399",
+          content: "15057466xxx",
           icon: "el-icon-mobile-phone"
         },
         {
@@ -158,38 +158,117 @@ export default {
         {
           name: "github",
           text: "github",
-          content: "https://github.com/Moking1997/",
+          content: "请输入自己所需",
           icon: "el-icon-user"
         },
         {
           name: "blog",
           text: "博客",
-          content: "https://moking1997.github.io/",
+          content: "请输入自己所需",
           icon: "el-icon-location"
         },
         {
           name: "resume",
           text: "简历",
-          content: "https://moking1997.github.io/",
+          content: "请输入自己所需",
           icon: "el-icon-trophy"
         }
       ],
       education: {
         year: "2016-2020",
-        school: "宁波大学科学技术学院",
+        school: "xx大学",
         speciality: "计算机科学与技术"
       },
       experiences: [
         {
-          company: "xx公司",
+          company: "杏树林信息技术有限公司",
           year: "2016-2017",
-          items: [{ item: "xx项目", tasks: [{ task: "xx任务" }] }]
+          items: [
+            {
+              item: "商业前台服务（2017 — 2018）",
+              tasks: [
+                {
+                  task:
+                    "<strong>&nbsp;前后端分离</strong>项目的前端, node主要用于返回页面"
+                },
+                {
+                  task:
+                    " 将项目拆分为多页面应用, 使用<strong>webpack4</strong>打包"
+                }
+              ]
+            }
+          ]
         }
       ],
       skills: [
         {
-          name: "xx方面",
-          content: [{ title: "xx技能", skills: [{ skill: "xx任务" }] }]
+          name: "Web后端",
+          content: [
+            {
+              title: "Node.js",
+              skills: [
+                {
+                  skill:
+                    "  能使用<strong>Koa2/Express/egg</strong> 等框架独立搭建后端服务,"
+                },
+                {
+                  skill:
+                    " 能开发项目组日常使用中间件/工具包等, 并发布至私有npm仓库"
+                },
+                {
+                  skill: "  能配合<strong>MySql + knex</strong> 完成 CRUD"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "Web前端",
+          content: [
+            {
+              title: "HTML/CSS",
+              skills: [
+                {
+                  skill:
+                    " 能够编写语义化的<strong>HTML</strong> ，熟悉<strong>CSS</strong>的使用，实现常用的布局与动画"
+                },
+                {
+                  skill:
+                    " 了解<strong>HTML5/CSS3</strong> ，能熟练使用部分新特性"
+                },
+                {
+                  skill:
+                    "  熟悉<strong>异步编程, 跨源资源共享</strong>, 掌握常见的解决方案及原理"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "其它",
+          content: [
+            {
+              title: "个人项目",
+              skills: [
+                {
+                  skill: " 在线简历编辑"
+                }
+              ]
+            },
+            {
+              title: "工具使用",
+              skills: [
+                {
+                  skill:
+                    "   日常使用 <strong>Webstorm / VSCode</strong> 进行开发"
+                },
+                {
+                  skill:
+                    "   熟练使用<strong>Git</strong> 代码管理与团队协作工具"
+                }
+              ]
+            }
+          ]
         }
       ]
     };
