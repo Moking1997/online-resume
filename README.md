@@ -15,5 +15,6 @@ npm run dev
 npm run build
 npm test
 ```
+[在线地址](http://www.mokinggame.cn/resume/dist/#/)
 效果如下:
 ![](resume.png)
